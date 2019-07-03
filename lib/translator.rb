@@ -26,6 +26,7 @@ end
 
 def get_english_meaning(file, japanese_emoticon)
   library = load_library(file)
-  p library["get_meaning"]
-  
+  if library["get_meaning"].include?(japanese_emoticon)
+    p library["get_meaning"][japanese_emoticon]
+  end
 end
