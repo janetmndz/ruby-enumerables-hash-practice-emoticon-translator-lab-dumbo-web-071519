@@ -26,5 +26,6 @@ end
 
 def get_english_meaning(file, japanese_emoticon)
   library = load_library(file)
+  p library["get_meaning"]
   
 end
