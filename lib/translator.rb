@@ -15,9 +15,10 @@ def load_library(yaml_file)
 end
 
 def get_japanese_emoticon(file, english_emoticon)
-  emoticons_library = load_library(file)
-  if emoticons_library["get_emoticon"].include?(english_emoticon)
-    p emoticons_library["get_emoticon"][english_emoticon]
+  library = load_library(file)
+  
+  if library["get_emoticon"].include?(english_emoticon)
+    p library["get_emoticon"][english_emoticon]
   else
     p "Sorry, emoticon doesn't exist"
   end
